@@ -29,16 +29,18 @@ body {
 .navbar {
     position: fixed;
     top: 10px;
-    left: 5px;
-    width: 95%; /* عرض الشاشة بالكامل */
+    left: 50%;
+    transform: translateX(-50%); /* نخليها مركزية */
+    width: 95%; /* يفضل نخليه max-width */
+    max-width: 1200px; /* أقصى عرض على شاشات كبيرة */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
     background-color: rgba(10, 10, 10, 0.8);
     box-shadow: 0 0 15px rgba(0, 123, 255, 0.7);
-    z-index: 10; /* فوق الخلفية */
-    border-radius: 20px; /* شيل الكيرفات علشان تبقى بار كاملة */
+    z-index: 10;
+    border-radius: 20px;
 }
 
 .navbar a {
@@ -299,6 +301,13 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .navbar {
+        width: 90%; /* نخليها أصغر على الموبايل */
+        padding: 10px 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
     .navbar .links {
         display: none; /* نخفي الروابط */
         position: absolute;
