@@ -281,3 +281,41 @@ body {
   color: #a200ff;
   text-shadow: 0 0 8px #00ffff, 0 0 12px #a200ff;
 }
+
+/* برجر أيقونة مخفية في الشاشات الكبيرة */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #00aaff;
+    border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar .links {
+        display: none; /* نخفي الروابط */
+        position: absolute;
+        top: 70px;
+        right: 30px;
+        flex-direction: column;
+        background: rgba(10,10,10,0.9);
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0,123,255,0.7);
+    }
+
+    .navbar .links.show {
+        display: flex;
+    }
+
+    .burger {
+        display: flex;
+    }
+}
