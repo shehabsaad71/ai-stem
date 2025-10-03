@@ -331,6 +331,12 @@ body {
 
 @media (max-width: 480px) {
   .navbar{
-    width: 80%;
+    width: 75%;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar{
+    width: 65%;
   }
 }
